@@ -14,7 +14,7 @@
  */
 
 (function() {
-  var app = angular.module("ngAngularBind", []);
+  var app = angular.module("ngDexieBind", []);
   app.factory('$dexieBind', [
     '$q', "$rootScope", "$timeout", "$log",
     function ($q, $rootScope, $timeout, $log) {
@@ -77,7 +77,7 @@
           });
         });
         var addItem = function (item) {
-          table.put(item).then(function(data) {
+          table.put(angular.copy(item)).then(function(data) {
             angular.extend(item, data);
             $rootScope.$broadcast(table.name, { id: item.id, verb: 'created', scope: $scope.$id, data: angular.copy(item) });
             addCollectionWatchersToSubitemsOf(data, $scope, table);
@@ -134,7 +134,7 @@
               if (!angular.equals(oldValue, newValue) && // is in the database and is not new
                   oldValue.id == newValue.id) { //is not an update FROM backend
 
-                  table.put(newValue, oldValue.id).then(function(item) {
+                  table.put(angular.copy(newValue), oldValue.id).then(function(item) {
                     angular.extend(newValue, item);
                     $rootScope.$broadcast(table.name, { id: oldValue.id, verb: 'updated', scope: $scope.$id, data: angular.copy(newValue) });
                   }).catch(function(err) { 
