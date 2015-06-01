@@ -90,6 +90,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-conventional-changelog');
 
     // Default task.
-    grunt.registerTask('default', ['concat', 'uglify', 'karma', 'coveralls']);
+    grunt.registerTask('default', ['concat', 'uglify'/*, 'karma', 'coveralls'*/]);
     grunt.registerTask('release', ['bump-only', 'default','changelog', 'bump-commit']);
 };

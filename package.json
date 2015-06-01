@@ -1,6 +1,6 @@
 {
   "name": "angular-dexie-bind",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "An angular service to bind IndexDB queries to angular variables",
   "keywords": [
     "sailsjs",
