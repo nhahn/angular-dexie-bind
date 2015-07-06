@@ -81,7 +81,7 @@ describe('the angular Dexie bind service', function() {
         setTimeout(function() {
           expect($rootScope.test.length).to.equal(2);
           done();
-        }, 500);
+        }, 100);
       });
 
       it('should remove the oject when a record is deleted', function(done) {
@@ -91,7 +91,7 @@ describe('the angular Dexie bind service', function() {
         setTimeout(function() {
           expect($rootScope.test.length).to.equal(0);
           done();
-        }, 500);
+        }, 100);
       });
 
       it('should update the oject when the record is updated', function(done) {
@@ -103,7 +103,7 @@ describe('the angular Dexie bind service', function() {
         setTimeout(function() {
           expect($rootScope.test[0].name).to.equal('person6');
           done();
-        }, 500);
+        }, 100);
       });
       
       it('should update database object when modified in angular', function(done) {
@@ -116,7 +116,7 @@ describe('the angular Dexie bind service', function() {
           }).catch(function(err) {
             done(err);
           });
-        }, 500);
+        }, 100);
       });
       
       it('should not update the angular binding when the record doesn\'t apply', function(done) {
@@ -126,7 +126,7 @@ describe('the angular Dexie bind service', function() {
         setTimeout(function() {
           expect($rootScope.test.length).to.equal(1);
           done();
-        }, 500);
+        }, 100);
       });
     
     });
@@ -159,7 +159,7 @@ describe('the angular Dexie bind service', function() {
           expect($rootScope.first.length).to.equal(2);
           expect($rootScope.second.length).to.equal(1);
           done();
-        }, 500);
+        }, 100);
       });
       
       it('should only update the respective bindings when a record is removed', function(done) {
@@ -170,7 +170,7 @@ describe('the angular Dexie bind service', function() {
           expect($rootScope.first.length).to.equal(1);
           expect($rootScope.second.length).to.equal(0);
           done();
-        }, 500);
+        }, 100);
       });
       
     });
