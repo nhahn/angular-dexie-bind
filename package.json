@@ -1,24 +1,19 @@
 {
   "name": "angular-dexie-bind",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "An angular service to bind IndexDB queries to angular variables",
   "keywords": [
-    "sailsjs",
+    "dexie.js",
+    "dexiejs",
     "angular",
-    "sails.js",
+    "indexeddb",
     "angular.js",
     "angularjs",
-    "sails",
     "bind"
   ],
   "homepage": "https://github.com/nhahn/angular-dexie-bind",
   "bugs": "https://github.com/nhahn/angular-dexie-bind/issues",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/nhahn/angular-dexie-bind/raw/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "author": {
     "name": "Nathan Hahn",
     "email": "nphahn@gmail.com",
@@ -31,35 +26,22 @@
     "url": "https://github.com/nhahn/angular-dexie-bind.git"
   },
   "devDependencies": {
-    "angular": "~1.2.16",
-    "async": "^0.9.0",
+    "angular": "~1.3.17",
     "bower": "^1.3.5",
-    "chai": "~1.9.1",
+    "chai": "~3.0.0",
     "coveralls": "^2.10.0",
-    "dexie": "dfahlander/Dexie.js",
+    "dexie": "~1.1.0",
     "grunt": "~0.4.5",
-    "grunt-bump": "0.0.16",
+    "grunt-bump": "~0.3.1",
     "grunt-cli": "^0.1.13",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-jshint": "~0.11.2",
     "grunt-contrib-uglify": "^0.5.1",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-conventional-changelog": "^1.1.0",
-    "grunt-karma": "^0.8.3",
-    "grunt-karma-coveralls": "^2.5.1",
+    "grunt-conventional-changelog": "^1.2.2",
     "istanbul": "^0.2.16",
-    "karma": "^0.12.16",
-    "karma-chai": "~0.1.0",
-    "karma-chai-plugins": "~0.2.1",
-    "karma-chrome-launcher": "^0.1.4",
-    "karma-coverage": "^0.2.4",
-    "karma-htmlfile-reporter": "^0.1.2",
-    "karma-junit-reporter": "~0.2.2",
-    "karma-mocha": "~0.1.3",
-    "karma-mocha-reporter": "^0.2.8",
-    "karma-sauce-launcher": "^0.2.8",
-    "mocha": "^1.20.1",
-    "mocha-lcov-reporter": "0.0.1"
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "~0.0.2"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/bower install"

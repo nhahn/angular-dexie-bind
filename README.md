@@ -1,3 +1,5 @@
+[![devDependency Status](https://david-dm.org/nhahn/angular-dexie-bind/dev-status.svg)](https://david-dm.org/nhahn/angular-dexie-bind#info=devDependencies)
+
 Angular Dexie Bind
 ==================
 
