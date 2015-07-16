@@ -57,11 +57,6 @@ module.exports = function (grunt) {
                 src: 'Gruntfile.js'
             }
         },
-        karma: {
-            unit: {
-                configFile: 'karma.config.js'
-            }
-        },
         coveralls: {
             options: {
                 debug: true,
@@ -85,8 +80,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-bump');
-    grunt.loadNpmTasks('grunt-karma');
-    grunt.loadNpmTasks('grunt-karma-coveralls');
     grunt.loadNpmTasks('grunt-conventional-changelog');
 
     // Default task.

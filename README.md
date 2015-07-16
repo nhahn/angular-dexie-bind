@@ -8,15 +8,21 @@ Angular Dexie Bind
 This module provides an Angular JS service that allows you to bind a Dexie.js query to an angular variable. This is accomplished (and maintained) in one line
 
 ```javascript
-var query = $dexieBind.bind(db.TableName.where('key').equals('some_val'), $scope);
+var query = $dexieBind.bind(db, db.TableName.where('key').equals('some_val'), $scope);
 ```
 
-This *magic* command performs the folling functions:
+The `bind` command performs the folling functions:
 - Watches for any changes in your Dexie.js flavored IndexDB database using [Dexie Observable]()
-- Checks and automatically updates the Dexie db whenever the array the query is bound to is updated
-- Watches the individual items in the array, and updates their corresponding record whenever they are changed
+- Filters the results returned from the Dexie.js db so that it follows the parameters provided by your query
+- Allows you to join other tables to this query by calling `$join` on the set returned from the promise
+- If the *distinct* option was used in Dexie, instead of an `Array` being returned, the result is a JS object(/hash)
+- If the scope is destroyed, the binding is removed from Dexie Observable. 
 
 Installation
 ------------
 
+First, make sure you have included the Dexie.js and Dexie.Observable.js files before this one. Finally, include this javascript file, and in your angular app, include the `ngDexieBind` service. This will provide you with the `$dexieBind` variable you can create new bindings from. 
 
+Testing
+------------
+There are some unit tests written and included for this library. It's not a fully featured suite yet, but I hope to eventually get it there. Any contributions to this extension are most welcome!
