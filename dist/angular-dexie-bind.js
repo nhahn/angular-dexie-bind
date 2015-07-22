@@ -1,4 +1,4 @@
-/*! angular-dexie-bind - v0.1.2 - 2015-07-16
+/*! angular-dexie-bind - v0.1.2 - 2015-07-22
 * https://github.com/nhahn/angular-dexie-bind
 * Copyright (c) 2015 Nathan Hahn; Licensed  */
 /*! angular-dexie-bind - v0.0.2 - 2015-07-01
@@ -182,7 +182,7 @@
             } else {
               for (var prop in self) { 
                 if (self.hasOwnProperty(prop) && prop.charAt(0) !== '$') {
-                  ids[prop] = 1; 
+                  ids[this[prop][thisField]] = 1;
                 }
               }  
             }
@@ -231,7 +231,7 @@
                   } else {
                     for (var prop in self) { 
                       if (self.hasOwnProperty(prop) && prop.charAt(0) !== '$') {
-                        ids[prop] = 1; 
+                        ids[self[prop][self.$joinListeners[i].thisField]] = 1;
                       }
                     }                    
                   }

@@ -404,8 +404,6 @@ describe('the angular Dexie bind service', function() {
         });
       });
       
-      
-      
     }); 
   }); 
 });
